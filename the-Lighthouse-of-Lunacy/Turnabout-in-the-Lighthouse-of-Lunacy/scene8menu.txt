@@ -262,6 +262,7 @@ set _ev cova$
 showevl
 char hellinger e=closed
 "Yes,{p15} I also encountered this Ander Cova in front of the entrance to this building."
+"This is a test. Hi Bitches."
 
 char lilian hide
 "What'd he say?"
