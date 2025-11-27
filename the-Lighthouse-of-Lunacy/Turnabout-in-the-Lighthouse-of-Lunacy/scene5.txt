@@ -133,13 +133,13 @@ bg overview
 fg holdenOV
 sfx Jury
 char hide
-"The possessions of a murderer,{p15} how intriguing!{p30}{next}"
+"The possessions of a murderer,{p15} how intriguing!{p60}{next}"
 sfx Jury
 char hide
-"I hope there's something cool.{p30} Like a sniper rifle!{p30}{next}"
+"I hope there's something cool.{p30} Like a sniper rifle!{p60}{next}"
 sfx Jury
 char hide
-"I wonder if he really collected ancient figures.{p30} There were rumors about that.{p30}{next}"
+"I wonder if he really collected ancient figures.{p30} There were rumors about that.{p60}{next}"
 delete name=holdenOV
 
 char lilian e=nuhuh

@@ -31,39 +31,50 @@ mus 18. Tchaikovsky (Remix)
 set _music_loop 18. Tchaikovsky (Remix) - Loop
 
 label start
+set dots 5
 #Adds the penalty bar
 penalty
 cross victest1
 
 #Declare what statement is what
 statement vic1A
+set dot 1
 bg prosecutorbg
 fg pbench 
 char victoria e=smug
+dots
 "After a single gunshot was heard,{p15} people immediately rushed to the source."
 
 statement vic1B
+set dot 2
 bg prosecutorbg
 fg pbench 
 char victoria e=smug
+dots
 "The source was a locked room.{p30} The only key was inside,{p15} so the door had to be broken down."
 
 statement vic1C
+set dot 3
 bg prosecutorbg
 fg pbench 
 char victoria e=csmile
+dots
 "Inside,{p15} we found a gunshot victim and the defendant,{p15} gun in hand."
 
 statement vic1D
+set dot 4
 bg prosecutorbg
 fg pbench 
 char victoria e=csmile
+dots
 "The door is the only viable entrance and exit to the room."
 
 statement vic1E
+set dot 5
 bg prosecutorbg
 fg pbench 
 char victoria e=csmile
+dots
 "Therefore,{p15} nobody else could have committed this crime."
 endcross
 
@@ -71,6 +82,8 @@ endcross
 label comments
 delete name=penalty
 bg timestop/timestop39A name=timestop39A
+removeskip
+set _cr_button false
 "{f10}{next}"
 pause 120
 invert value=1 name=timestop39A
@@ -86,6 +99,7 @@ sfx chain
 fg chaintop z=4 nowait
 pause 30
 "{f10}{next}"
+set _cr_button true
 fg chainbottom z=4 nowait
 pause 200
 char aurelia e=stern name=aurelia x=-256 z=3 stack
@@ -94,6 +108,7 @@ char lilian e=normal name=lilian x=256 z=3 stack
 scroll name=lilian x=-210 z=3 speed=10 stack
 pause 120
 
+textskipcheck
 setvar _speaking lilian
 emo normal
 "Hm,{p15} this is more oppressive than I thought."
@@ -118,7 +133,7 @@ emo side
 
 setvar _speaking lilian
 emo normal
-"{sfx huh}There's is an objection in court called "assumes facts not in evidence"."
+"{sfx huh}There is an objection in court called "assumes facts not in evidence"."
 "If you can show something she claims is not reflected in the court record..."
 emo wink
 "{sfx idea}You'll force her to present proof.{p30} Which might stall things,{p15} at least."
@@ -134,7 +149,9 @@ emo normal
 setvar _speaking aurelia
 emo glare
 "I'll start looking for facts that aren't backed by the court record,{p15} then."
+"lmaooo"
 
+fg black stack
 fade in name=black
 delete name=chaintop nowait
 delete name=chainbottom nowait
@@ -144,9 +161,8 @@ delete name=gearfg nowait
 delete name=aurelia nowait
 delete name=lilian nowait
 pause 180
+delete name=timestop39A
 delete name=black
-
-bg black stack
 fg black stack fade
 pause 30
 bg prosecutorbg

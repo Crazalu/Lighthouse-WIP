@@ -297,13 +297,11 @@ char aurelia e=d-smile
 "{sfx anger}Good thing that's not happening,{p15} then."
 
 sfx /victoria/objection.ogg
-fg ObjectionAnim nowait
-pause 50
+fg ObjectionAnim
 
-#courtzoom make it work
+pause 15
+courtzoomdtp d-smile think
 
-bg prosecutorbg
-fg pbench
 char victoria e=think
 "I really must take care around people like you."
 char victoria e=smug
