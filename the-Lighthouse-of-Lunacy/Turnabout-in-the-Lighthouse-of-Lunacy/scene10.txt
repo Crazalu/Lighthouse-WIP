@@ -2,6 +2,7 @@ set _textbox_bg general/textbox2
 set _cr_button true
 textskipcheck
 bg crimescene2
+emptytext
 "{f10}{next}"
 pause 120
 invert value=1 name=crimescene2
@@ -23,6 +24,7 @@ char lilian e=side name=lilian x=256 z=3 stack
 scroll name=lilian x=-210 z=3 speed=10 stack
 pause 120
 
+textreturn
 char lilian e=side x=-210 stack
 "Let's take a moment to think."
 

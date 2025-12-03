@@ -42,7 +42,9 @@ bg judgebg
 fg judgeseat
 set char_holden_name ???
 char holden e=normal
+emptytext
 "{sfx dun}{f10}{p100}{next}"
+textreturn
 
 music_fade_in nowait
 mus 10. Infiltration Mission [Judgement]
@@ -95,24 +97,16 @@ hideevl
 
 char holden e=crossed
 "{sfx anger}A mad criminal who committed many vile atrocities."
-char holden e=sideeye
-"...Shockingly,{p15} since he once served the nation and was a respected member in the field of psychology."
-char holden e=normal
-"His actions cannot be excused.{p30} Yet I can't blame you for being interested."
-char holden e=sideeye
-"That morbid curiosity cannot be helped.{p30} What went through that man's head?"
-char holden e=normal
-"With him gone,{p15} only his possessions may give some insights."
-char holden e=crossed
-"No family members ever came forward to claim his things."
+"{e sideeye}...Shockingly,{p15} since he once served the nation and was a respected member in the field of psychology."
+"{e normal}His actions cannot be excused.{p30} Yet I can't blame you for being interested."
+"{e sideeye}That morbid curiosity cannot be helped.{p30} What went through that man's head?"
+"{e normal}With him gone,{p15} only his possessions may give some insights."
+"{e crossed}No family members ever came forward to claim his things."
 "I considered just getting rid of them."
-char holden e=sideeye
-"...Which would have been a shame."
+"{e sideeye}...Which would have been a shame."
 "I cannot discount the historical value some of these pieces could hold."
-char holden e=smug
-"That is why,{p15} today,{p15} we are auctioning them off to you,{p15} dear guests."
-char holden e=normal
-"Let us begin without further delay."
+"{e smug}That is why,{p15} today,{p15} we are auctioning them off to you,{p15} dear guests."
+"{e normal}Let us begin without further delay."
 
 fg gavel
 
@@ -132,15 +126,15 @@ pause 60
 bg overview
 fg holdenOV
 sfx Jury
-char hide
+removeskip
+nt
 "The possessions of a murderer,{p15} how intriguing!{p60}{next}"
 sfx Jury
-char hide
 "I hope there's something cool.{p30} Like a sniper rifle!{p60}{next}"
 sfx Jury
-char hide
 "I wonder if he really collected ancient figures.{p30} There were rumors about that.{p60}{next}"
 delete name=holdenOV
+textskipcheck 
 
 char lilian e=nuhuh
 "The moment of truth,{p15} Aurelia."
@@ -152,8 +146,7 @@ char aurelia hide
 
 char lilian e=side
 "If it's anything too valuable,{p15} you might have trouble."
-char lilian e=peace
-"I'd be surprised if you could compete with the net values of those dudes."
+"{e peace}I'd be surprised if you could compete with the net values of those dudes."
 
 char aurelia hide
 "Who knows.{p30} Maybe they wasted it all on fancy suits."
@@ -163,7 +156,6 @@ fg witstand
 char susan e=normal
 "{sfx waaah}*pant*{n}{p30}I got the first item."
 
-char susan e=normal
 set _ev thinker
 showevl
 "Here it is,{p15} mother."
@@ -253,13 +245,16 @@ set _ev thinker
 showevl
 char holden e=sideeye
 "Any more bids?"
+removeskip
 char holden e=crossed
 "One,{p15} two...{p30}{next}"
+textskipcheck
 char aurelia hide
 nt
 "{sfx gameover}FIVE THOUSAND!"
 hideevl
 
+emptytext
 char holden e=normal
 "{sfx ohno}{f10}{p30}{next}"
 
@@ -271,15 +266,14 @@ char susan e=shock
 bg overview
 char lilian e=shock
 "{sfx ohno}{f10}{p30}{next}"
-
+textreturn
+removeskip
 bg overview
 fg holdenOV
 sfx Jury
-char aurelia hide
 nt
 "{sound blipnone}Seriously?{p30} Okay,{p15} that gentleman is just mad.{p50}{next}"
 sfx Jury
-char aurelia hide
 nt
 "{sound blipnone}Let him have his stupid thinker statue,{p15} then.{p50}{next}"
 delete name=holdenOV
@@ -299,8 +293,7 @@ hideevl
 char holden e=smug
 "{sfx idea}A good start.{p30} Very good indeed."
 "Don't worry,{p15} dear guests.{p30} There is still much more to come."
-char holden e=normal
-"{sfx anger}Bring the next one,{p15} Susan!{p30} Do I always need to remind you?"
+"{sfx anger}{e normal}Bring the next one,{p15} Susan!{p30} Do I always need to remind you?"
 
 bg witnessbg
 fg witstand
@@ -318,26 +311,23 @@ char holden e=normal
 set _ev coin
 showevl
 "And here's item number two.{p30} A medieval gold coin."
-char holden e=crossed
-"{sfx huh}Could this have been payment for some hit job?"
-char holden e=sideeye
-"{sfx key2}Or maybe Dr. Leid subjected someone to some unthinkable game using coin flips."
-char holden e=smug
-"How did the saying go?{p30} Heads I win,{p15} tails you lose.{p30} Let's begin the bidding."
+"{e crossed}{sfx huh}Could this have been payment for some hit job?"
+"{sfx key2}{e sideeye}Or maybe Dr. Leid subjected someone to some unthinkable game using coin flips."
+"{e smug}How did the saying go?{p30} Heads I win,{p15} tails you lose.{p30} Let's begin the bidding."
 "The starting bid is one hundre--{p30}{next}"
 
 char holden e=smug
-char aurelia hide
 nt
 "{sfx shouting}{sound blipnone}{s10}FIVE THOUSAND DOLLARS!"
+removeskip
 "{sfx Jury}Oh,{p15} come on!{p30} Really?{p30} REALLY?{p30}{next}"
 
 bg overview
 fg holdenOV
 sfx Jury
-char hide
 "This whole thing is rigged.{p30} It's pay to win!{p30}{next}"
 
+textskipcheck
 char aurelia hide
 "{c b}({sfx whoops}Dude,{p15} that's literally how auctions work.)"
 
@@ -348,7 +338,6 @@ char lilian e=peace
 char aurelia hide
 "Thanks for the input,{p15} but after student loans I've had enough of crippling debt."
 
-char aurelia hide
 nt
 "{sound blipnone}{sfx shouting}TWENTY THOUSAND!"
 
@@ -382,13 +371,10 @@ fade in name=overview nowait
 char lilian e=normal
 pause 30
 
-char lilian e=normal
 "I don't get it."
-char lilian e=side
-"{sfx huh}It doesn't seem like you're planning to bid on anything."
+"{e side}{sfx huh}It doesn't seem like you're planning to bid on anything."
 "{sfx key2}But you are getting busy taking notes."
-char lilian e=wink
-"{sfx key3}Is the plan to just remember who bought what?"
+"{sfx key3}{e wink}Is the plan to just remember who bought what?"
 
 char aurelia hide
 "I plead the fifth.{p30} Again."
@@ -408,8 +394,7 @@ char holden e=smug
 set _ev knifesheath
 showevl
 "{sfx dun}I present to you...{p50} the reaper's blade itself."
-char holden e=crossed
-"A highly effective combat knife.{p30} Dr. Leid probably obtained this while serving."
+"{e crossed}A highly effective combat knife.{p30} Dr. Leid probably obtained this while serving."
 "{sfx huh}Who knows for what other purposes it got misused."
 hideevl
 
@@ -420,8 +405,7 @@ char holden e=normal
 bg overview
 char lilian e=normal
 "That lady sure knows how to build up the hype."
-char lilian e=wink
-"{sfx idea}I must admit,{p15} I'm kind of interested in that buffet now.{p30} How about it?"
+"{e wink}{sfx idea}I must admit,{p15} I'm kind of interested in that buffet now.{p30} How about it?"
 
 pause 120
 
@@ -462,13 +446,11 @@ nt
 "{center}{sound typewriter.ogg}{c g}{spd 0.3}April 4,{p15} 6:34 PM{n}The Lighthouse of Lunacy{n}Dr. Leid's Former Study"
 pause 30
 
-char aurelia hide
 "{c b}({sfx huh}Huh,{p15} the door wasn't even locked.{p30} Good for me.)"
 
 pause 100
 
-chat aurelia hide
-"{c b}(I've got to hurry.{p30} Let's start with the desk.)
+"{c b}(I've got to hurry.{p30} Let's start with the desk.)"
 
 sfx pageflip
 pause 60
@@ -480,6 +462,7 @@ chat aurelia hide
 
 pause 120
 
+removeskip
 nt
 "{sfx anger}{s10}*cough*{n}{p20}{s10}*a-hem*{p120}{next}"
 char aurelia hide
@@ -497,7 +480,7 @@ delev holden1$
 addev holden2$
 pause 240
 
-
+textskipcheck
 char aurelia hide
 "And that's the entirety of what led up to this."
 "{sfx huh}I've got a clearer view on things now after going through it all again."

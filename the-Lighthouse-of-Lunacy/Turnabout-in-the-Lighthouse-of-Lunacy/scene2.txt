@@ -11,8 +11,7 @@ mus 0. Main Menu
 char lilian e=normal
 "{f10}So this is the place, huh?"
 "The salty air,{p15} the nice rural scenery.{p30} Not a bad spot for some sightseeing."
-char lilian e=wink
-"There even seems to be an amusement park nearby,{p15} if my eyes don't deceive."
+"{e wink}There even seems to be an amusement park nearby,{p15} if my eyes don't deceive."
 
 char aurelia hide
 "Plot twist,{p15} I'm not here for fun."
@@ -23,12 +22,11 @@ char lilian e=normal
 char aurelia hide
 "We can see if it's open after we're done here."
 "I'd feel kinda bad if I only bored you with my business now that you came over."
-"{c b}(Gotta throw her some bones to distract her.)
+"{c b}(Gotta throw her some bones to distract her.)"
 
 char lilian e=nuhuh
 "{sfx idea}Nice!{p30} It's a date,{p15} then."
-char lilian e=wink
-"Hope that doesn't turn out to be a death flag."
+"{e wink}Hope that doesn't turn out to be a death flag."
 
 char aurelia hide
 "We should be good.{p30} I didn't say I'd retire or anything."
@@ -136,8 +134,7 @@ char lilian e=normal
 char cova e=normal
 "Oh,{p15} no worries.{p30} Anyone should be careful around this place."
 "{sfx huh}The smartest move would have been to stay away."
-char cova e=tray
-"{sfx idea}{sfx f10}But now that you are here,{p15} perhaps I can help you to some refreshments?"
+"{sfx idea}{e tray}{f10}But now that you are here,{p15} perhaps I can help you to some refreshments?"
 
 char lilian e=normal
 "...Okay,{p15} Aurelia.{p30} Your wariness of this guy might be justified after all."
@@ -157,7 +154,6 @@ char cova e=tray
 set _ev cake
 showevr
 
-char cova e=tray
 "The Cova Strawberry Crisis,{p15} baked using my secret recipe."
 
 char aurelia hide
@@ -170,7 +166,6 @@ char aurelia hide
 
 char lilian e=shock
 pause 120
-char lilian e=shock
 "{sfx waaah}So easy!"
 
 char aurelia hide

@@ -52,15 +52,11 @@ fg dbench
 char aurelia e=d-normal
 "You can't be serious."
 
-#court scrolly
+courtzoomdtp d-normal normal
 
-bg prosecutorbg
-fg pbench
-char victoria e=normal
 "Feel free to provide your own testimony,{p15} Ms. Chase."
 "Just what were you doing in a locked room with a dead body?"
-char victoria e=smug
-"{sfx idea}Gun in hand,{p15} at that?"
+"{e smug}{sfx idea}Gun in hand,{p15} at that?"
 
 bg defensebg
 fg dbench
@@ -86,9 +82,9 @@ bg prosecutorbg
 fg pbench
 char victoria e=normal
 "Of course you would."
-char victoria e=smug
-"The fifth exists to stop people like you from saying really stupid things."
+"{e smug}The fifth exists to stop people like you from saying really stupid things."
 
+removeskip
 bg overview
 sfx Jury
 char hide
@@ -108,15 +104,14 @@ nt
 fg gavel-3
 
 pause 10
-
+textskipcheck
 bg judgebg
 fg judgeseat stack
 char judge e=normal
 "{sfx anger}Order!"
 "It is the defendant's right not to testify."
 "I would like to remind you that exercising this right can't be taken as proof."
-char judge e=warning
-"...Be that as it may,{p15} the facts remain the facts."
+"{e warning}...Be that as it may,{p15} the facts remain the facts."
 "Would you like to address the argument,{p15} Ms. Chase?"
 
 bg defensebg
@@ -124,7 +119,6 @@ fg dbench
 char aurelia e=d-normal
 "I...{p50} would definitely like to do that,{p15} yes."
 "{c b}(So this will be my first court battle.)"
-char aurelia e=d-sweat
-"{c b}(Lots of pressure for a first time.{p30} I hope I'm doing this right.)"
+"{e d-sweat}{c b}(Lots of pressure for a first time.{p30} I hope I'm doing this right.)"
 script scene12b
 

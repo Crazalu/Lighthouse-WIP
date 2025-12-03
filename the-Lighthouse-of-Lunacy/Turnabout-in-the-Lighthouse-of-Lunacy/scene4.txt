@@ -15,8 +15,7 @@ char aurelia hide
 
 char lilian e=side
 "So,{p15} what do you think about what that guy told us."
-char lilian e=normal
-"{sfx huh}You think there's a curse in this place?"
+"{sfx huh}{e normal}You think there's a curse in this place?"
 
 char aurelia hide
 "There might be.{p30} It's a little hard to just dismiss two people dying."
@@ -31,8 +30,7 @@ char aurelia hide
 
 char lilian e=peace
 "It would be stylish,{p15} though."
-char lilian e=wink
-"Maybe you should have just nodded and said "Mm,{p15} I see."."
+"{e wink}Maybe you should have just nodded and said "Mm,{p15} I see."."
 
 char aurelia hide
 "{c b}(Like you wouldn't see through that.)"
@@ -66,8 +64,7 @@ char aurelia hide
 
 char lilian e=normal
 "So what would you have to do?"
-char lilian e=peace
-"You're not planning to pat us down,{p15} I hope?"
+"{e peace}You're not planning to pat us down,{p15} I hope?"
 
 char gardt e=think
 "{sfx waaah}Oh god,{p15} hooopefully that won't be needed."
@@ -83,10 +80,8 @@ char aurelia hide
 
 char gardt e=think
 "The procedure was...{p50} let's see..."
-char gardt e=relief
-"{sfx idea}Right.{p30} Gonna have to have you provide some ID."
-char gardt e=crossed
-"No children allowed,{p15} I was told."
+"{sfx idea}{e relief}Right.{p30} Gonna have to have you provide some ID."
+"{e crossed}No children allowed,{p15} I was told."
 
 char lilian e=normal
 "You saying I don't look like I'm old enough?"
@@ -100,8 +95,7 @@ char lilian e=wink
 
 char gardt e=normal
 "{sfx whoops}Hnngh...{p50} okay well,{p15} it doesn't matter because I have to ask either way."
-char gardt e=think
-"Becauuuuse uh,{p15} also gotta note down your names.{p30} Just in case."
+"{e think}Becauuuuse uh,{p15} also gotta note down your names.{p30} Just in case."
 
 char lilian e=pout
 "Yikes!{p30} There must be some pretty expensive valuables on display here."
@@ -114,8 +108,7 @@ set _ev cova$
 showevl
 char gardt e=crossed
 "{sfx idea}At least there's that nice dude dropping by every now and then.{p30} Now that's a real buddy."
-char gardt e=think
-"Coooouuuld be worse,{p15} I guess."
+"{e think}Coooouuuld be worse,{p15} I guess."
 
 char lilian e=pout
 "So you've been bought off by those sweets as well."
@@ -132,8 +125,7 @@ char aurelia hide
 
 char gardt e=think
 "{sfx waaah}Riiight,{p15} I see you're in a hurry.{p30} We still gotta run one last check,{p15} though."
-char gardt e=crossed
-"{sfx idea}Go and step through the metal detector.{p30} Hard to go around it,{p15} anyway."
+"{sfx idea}{e crossed}Go and step through the metal detector.{p30} Hard to go around it,{p15} anyway."
 
 char lilian e=side
 "Why do we have to do that?{p30} We didn't have a chance to steal anything yet."
@@ -154,17 +146,18 @@ char gardt e=think
 "{sfx waaah}Oof,{p15} gotta take a quick look at that."
 set _ev pendant
 showevr
-char gardt e=normal
-"...Okaaay,{p15} nothing too suspicious,{p15} I guess."
+"{e normal}...Okaaay,{p15} nothing too suspicious,{p15} I guess."
 hideevr
 "Let me keep that for a sec.{p30} While you go through the detector."
 
 char lilian e=pout name=li
 "What a hassle."
 
+removeskip
 fade out name=li
 "{spd 0.3}...{p100}{next}"
 
+textskipcheck
 char gardt e=normal
 "{sfx idea}Aight,{p15} you're in the clear,{p15} madam.{p30} Neeext up is...?"
 
@@ -173,12 +166,14 @@ char aurelia hide
 "{c b}(Here goes...)"
 
 fade out name=li
+removeskip
 "{spd 0.3}...{p100}{next}"
 "{spd 3}{sfx shouting}{c g}*BEEEEEEEEEEEEEEEEEEEEEEEEP*{p30}{next}"
 
 char aurelia hide
 "{c b}({sfx owned}Ah crap,{p15} I forgot about--){p30}{next}"
 
+textskipcheck
 char gardt e=awkward
 "{sfx waaah}Oh jeeeez.{p30} Really?"
 "'fraid I'm forced to search you now,{p15} madam.{p30} Sorry."
@@ -191,10 +186,12 @@ showevl
 char aurelia hide
 "{sfx idea}This probably set it off."
 
+removeskip
 char gardt e=crossed
 "Ah,{p15} well thanks for your coop--{p10}{next}"
 hideevl
 
+textskipcheck
 music_fade_out nowait
 mus
 char gardt e=shock
@@ -215,8 +212,7 @@ hideevl
 
 char gardt e=shock
 "{sfx owned}Of course!{p30} I mean,{p15} no,{p15} not really.{p30} I mean,{p15} maybe?"
-char gardt e=stern
-"{sfx waaah}I got a bulletproof vest!{p30} Just so you know!"
+"{sfx waaah}{e stern}I got a bulletproof vest!{p30} Just so you know!"
 
 char aurelia hide
 "..."
@@ -237,8 +233,7 @@ char aurelia hide
 
 char gardt e=crossed
 "Yeaaah.{p30} Of course.{p30} I respect your right to do that."
-char gardt e=think
-"{sfx idea}We're definitely in America and not in Japan,{p15} after all."
+"{sfx idea}{e think}We're definitely in America and not in Japan,{p15} after all."
 
 char aurelia hide
 "{c b}({sfx whoops}Was that really something you had to remind yourself of?)"
@@ -259,14 +254,10 @@ char aurelia hide
 
 char gardt e=think
 "Look,{p15} all I'm paid for is to note any suspicious metallic objects."
-char gardt e=crossed
-"So you are free to keep your gun because,{p15} y'know..."
-char gardt e=stern
-"{sfx huh}If anyone WERE to end up getting shot..."
-char gardt e=relief
-"...well,{p15} I'd have it all noted down here who brought the weapon."
-char gardt e=crossed
-"{sfx idea}Buuut what are the chances of that happening?{p30} I mean,{p15} you'd have to be preeetty stupid."
+"{e crossed}So you are free to keep your gun because,{p15} y'know..."
+"{sfx huh}{e stern}If anyone WERE to end up getting shot..."
+"{e relief}...well,{p15} I'd have it all noted down here who brought the weapon."
+"{sfx idea}{e crossed}Buuut what are the chances of that happening?{p30} I mean,{p15} you'd have to be preeetty stupid."
 
 char aurelia hide
 "Agreed,{p15} I guess.{p30} That still makes some sort of sense."

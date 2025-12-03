@@ -8,7 +8,7 @@ addev presspass
 addev gunA
 addev lilian$
 nt
-"{center}{sound typewriter.ogg}{c g}{spd 0.3}April 4,{p15} 3:22 PM{n}Train"
+"{center}{sound typewriter.ogg}{c g}{spd 0.3}April 4, 3:22 PM{n}Train"
 mus 5. Matter Of Factly [Judgement]
 set _music_loop 5. Matter Of Factly [Judgement] - Loop
 
@@ -19,7 +19,7 @@ char aurelia hide
 char lilian e=shock
 "Yikes.{p30} I'm surprised you had this trip scheduled at all."
 char lilian e=normal
-"From the sound of it there was a pretty decent chance you wouldn't make it today."
+"From the sound of it, there was a pretty decent chance you wouldn't make it today."
 char aurelia hide
 "What can I say?{p30} Never a time to rest."
 char lilian e=nuhuh

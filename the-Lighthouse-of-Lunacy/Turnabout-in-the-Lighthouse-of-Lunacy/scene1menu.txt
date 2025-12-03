@@ -1,6 +1,4 @@
-music_fade_in
-mus 5. Matter Of Factly [Judgement]
-set _music_loop 5. Matter Of Factly [Judgement] - Loop
+set _music_fade 100
 
 label scene1menu
 set _textbox_bg general/textbox2
@@ -57,8 +55,7 @@ char aurelia hide
 "{c b}(I guess you wouldn't.)"
 char lilian e=side
 "If you're going to set your mystery on a train,{p15} the train should actually matter."
-char lilian e=wink
-"Otherwise it's just amateur writing!"
+"{e wink}Otherwise it's just amateur writing!"
 char aurelia hide
 "Look at you,{p15} slandering the most famous Queen of Crime.{p30} You think you can do better?"
 char lilian e=nuhuh
@@ -105,8 +102,7 @@ delete pw_main stack y=192 name=wa
 
 char lilian e=normal
 "I still can't believe your journalism career took off like that."
-char lilian e=nuhuh
-"{sfx idea}You seemed so set on becoming a detective back then."
+"{sfx idea}{e nuhuh}You seemed so set on becoming a detective back then."
 
 char aurelia hide
 "There isn't really that much of a difference."
@@ -133,8 +129,7 @@ char aurelia hide
 
 char lilian e=normal
 "Is there a killer,{p15} or is there really a computer file driving people mad somehow?"
-char lilian e=nuhuh
-"She didn't seem sure yet,{p15} perhaps you should help her out?{p30} You must have some helpful info."
+"{e nuhuh}She didn't seem sure yet,{p15} perhaps you should help her out?{p30} You must have some helpful info."
 
 char aurelia hide
 "I really rather she stopped working for that detective."
@@ -148,8 +143,7 @@ char aurelia hide
 
 char lilian e=nuhuh
 "{sfx idea}Got it in one,{p15} as expected.{p30} You should have heard her talk about you."
-char lilian e=normal
-"You're probably her role model."
+"{e normal}You're probably her role model."
 
 char aurelia hide
 "She just has no idea what she really wants to be.{p30} I need to talk with her husband about this."
@@ -168,8 +162,7 @@ char aurelia hide
 "{c b}({sfx whoops}Lady,{p15} you're the one that brought her up.)"
 "{c b}(Though I will gladly use this chance to put the spotlight on something else.)"
 setflag train1
-flag train1 AND train2 AND train3 AND train4?
-goto trainpost
+flag train1 AND train2 AND train3 AND train4 trainpost
 goto talk
 
 label Lilian Maristella
@@ -189,8 +182,7 @@ char aurelia hide
 
 char lilian e=normal
 "I guess someone did end up dying in the same apartment building I was staying in."
-char lilian e=nuhuh
-"Thrown straight out the window onto the pavement below.{p30} Can you believe it?"
+"{e nuhuh}Thrown straight out the window onto the pavement below.{p30} Can you believe it?"
 
 char aurelia hide
 "{sfx whoops}...So much for a boring week."
@@ -215,8 +207,7 @@ char aurelia hide
 
 char lilian e=pout
 "{sfx anger}Bookmark it next time!"
-char lilian e=normal
-"{sfx anger}Yeah,{p15} it's a webshop!{p30} Make sure to actually look!{p30} There might be something for you."
+"{e nuhuh}{sfx anger}Yeah,{p15} it's a webshop!{p30} Make sure to actually look!{p30} There might be something for you."
 
 char aurelia hide
 "Knowing you,{p15} it's not really my style of fashion.{p30} Try with our cosplaying friend."
@@ -233,8 +224,7 @@ char lilian e=pout
 char aurelia hide
 "{c b}(I must be getting old.{p30} I kind of miss those peak Queens of Crime days.)"
 setflag train2
-flag train1 AND train2 AND train3 AND train4?
-goto trainpost
+flag train1 AND train2 AND train3 AND train4 trainpost
 goto talk
 
 label The Queens of Crime
@@ -302,8 +292,7 @@ char aurelia hide
 
 char lilian e=nuhuh
 "{sfx idea}Well,{p15} I don't want to say I told you from the start she's no good..."
-char lilian e=normal
-"But I do recall it."
+"{e normal}But I do recall it."
 
 char aurelia hide
 "You know the feeling when you think someone is just being obnoxious for the satire?"
@@ -342,8 +331,7 @@ bg train fade
 mus 5. Matter Of Factly [Judgement]
 set _music_loop 5. Matter Of Factly [Judgement] - Loop
 setflag train3
-flag train1 AND train2 AND train3 AND train4?
-goto trainpost
+flag train1 AND train2 AND train3 AND train4 trainpost
 goto talk
 
 label This trip
@@ -359,13 +347,10 @@ char aurelia hide
 
 char lilian e=side
 "{sfx huh}You only mentioned that you were going to some tower in our server."
-char lilian e=normal
-"{sfx key2}You also said there was some kind of auction happening there,{p15} but that's about it."
-char lilian e=nuhuh
-"{sfx key3}I looked the place up."
+"{sfx key2}{e normal}You also said there was some kind of auction happening there,{p15} but that's about it."
+"{sfx key3}{e nuhuh}I looked the place up."
 "Seems like the owner died some years ago and his possessions are getting pawned off."
-char lilian e=normal
-"There's also some local rumor that the place is cursed.{p30} But I couldn't find out much more than that."
+"{e peace}There's also some local rumor that the place is cursed.{p30} But I couldn't find out much more than that."
 
 char aurelia hide
 "Therefore...?"
@@ -384,8 +369,7 @@ char aurelia hide
 
 char lilian e=pout
 "{sfx anger}Really?{p30} You gotta be kidding!"
-char lilian e=side
-"Just what kind of crime are you up to here?"
+"{e side}Just what kind of crime are you up to here?"
 
 char aurelia hide
 "{c b}(I knew it was a mistake to get baited into revealing my plans for today.)"
@@ -397,8 +381,7 @@ char lilian e=normal
 char aurelia hide
 "Sure,{p15} that's a given.{p30} Nothing I can say now to get rid of you."
 setflag train4
-flag train1 AND train2 AND train3 AND train4?
-goto trainpost
+flag train1 AND train2 AND train3 AND train4 trainpost
 goto talk
 
 label trainpost
@@ -426,8 +409,7 @@ char aurelia hide
 "{sfx huh}Why in the world would you think I'd do that?"
 char lilian e=normal
 "Just got a vague hunch that that's your plan."
-char lilian e=peace
-"{sfx idea}So submit to your fate."
+"{sfx idea}{e peace}So submit to your fate."
 "{sfx shouting}Show the world your achievements!{p30} Let them know you're the real deal!"
 char aurelia hide
 "{sfx waaah}Sounds like a classic recipe to get marked as really annoying."
@@ -461,8 +443,7 @@ char aurelia hide
 "..."
 "This is..."
 label lilian1
-list trainconvo
-set _list_back_button_false
+list trainconvo noback 
 li My Best Friend
 li My Partner in Crime
 li My Worst Enemy
@@ -474,8 +455,7 @@ char aurelia hide
 "My best friend.{p30} I can always count on her to have my back when there's trouble."
 char lilian e=shock
 "{sfx waaah}{s10}What the--"
-char lilian e=side
-"{s10}{sfx owned}I wasn't ready for such a direct answer!"
+"{s10}{sfx owned}{e side}I wasn't ready for such a direct answer!"
 char aurelia hide
 "I know.{p30} It's the easiest way to get you flustered."
 char lilian e=normal
@@ -485,7 +465,7 @@ char aurelia hide
 
 addvar lilian 1
 
-set _list_back_button_true
+set _list_back_button true
 hideevl
 setflag friendone
 goto present
@@ -514,8 +494,7 @@ char aurelia hide
 "...What?{p30} Why?"
 char lilian e=normal
 "It's what besties do.{p30} At least that's what I've read."
-char lilian e=peace
-"Let's do it!{p30} I've got a spare in your size."
+"{e peace}Let's do it!{p30} I've got a spare in your size."
 "{sfx idea}Oh,{p15} we should also get some matching tattoos while we're at it."
 char aurelia hide
 "I'm starting to regret this route.{p30} Can I go back and change my answer?"
@@ -554,7 +533,7 @@ char lilian e=wink
 "We'll find out in the long run.{p30} Don't worry,{p15} partner.{p30} I'll keep watching your back."
 char aurelia hide
 "{c b}(That's what I'm worried about.)"
-set _list_back_button_true
+set _list_back_button true
 addvar lilian 1
 addvar love 1
 setflag partnerone
@@ -578,8 +557,7 @@ char aurelia hide
 "I'd stay away if I were you.{p30} This is my worst enemy.{p30} Always causes a mess."
 char lilian e=pout
 "{sfx anger}{s10}Wow,{p15} I see how it is."
-char lilian e=wink
-"You're starting to catch on.{p30} That's not good."
+"{e wink}You're starting to catch on.{p30} That's not good."
 char aurelia hide
 "You know I'm decent at spotting patterns."
 char lilian e=nuhuh
@@ -595,7 +573,7 @@ char lilian e=normal
 char aurelia hide
 "{c b}(Lilian will remember that...)"
 subvar lilian 1
-set _list_back_button_true
+set _list_back_button true
 setflag worstone
 hideevl
 goto present
