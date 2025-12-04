@@ -11,8 +11,7 @@ char lilian e=normal
 
 char cova e=normal
 "Yes,{p15} how may I help?"
-char cova e=tray
-"Perhaps you'd like another Cova Strawberry Crisis for the road."
+"{e tray}Perhaps you'd like another Cova Strawberry Crisis for the road."
 
 char lilian e=peace
 "{sfx huh}Gladly.{p30} But should you really be calling them that?"
@@ -25,15 +24,13 @@ char lilian e=normal
 
 char cova e=tray
 "{sfx owned}{s10}How did you--!?"
-char cova e=normal
-"...Well,{p15} if you have noticed,{p15} I won't fight it."
+"{e normal}...Well,{p15} if you have noticed,{p15} I won't fight it."
 "{sfx huh}That's right,{p15} I did not make these cakes myself."
 "There is no secret recipe,{p15} I just...{p50} bought them from a local store."
 
 char lilian e=normal
 "And then you embellished the story to justify the higher price,{p15} got it."
-char lilian e=nuhuh
-"Lying isn't good,{p15} sir."
+"{e nuhuh}Lying isn't good,{p15} sir."
 
 char cova e=normal
 "...I have no excuse.{p30} My apologies."

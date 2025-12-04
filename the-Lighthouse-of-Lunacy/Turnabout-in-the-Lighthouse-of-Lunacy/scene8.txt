@@ -40,12 +40,9 @@ char lilian hide
 
 char gardt e=think
 "{spd 0.5}..."
-char gardt e=normal
-"Err...{p50} with all due respect,{p15} madam..."
-char gardt e=crossed
-"{sfx key2}I saw you coming here together with the lady that brought a gun."
-char gardt e=think
-"So there's a deeeecent chance you've got to like,{p15} recuse yourself from this one."
+"{e normal}Err...{p50} with all due respect,{p15} madam..."
+"{e crossed}{sfx key2}I saw you coming here together with the lady that brought a gun."
+"{e think}So there's a deeeecent chance you've got to like,{p15} recuse yourself from this one."
 
 music_fade_out
 
@@ -65,8 +62,10 @@ char lilian hide
 "{c b}({sfx waaah}Wait,{p15} there's actually someone there.)"
 
 pause 60
+emptytext
 char hellinger e=normal
 "{f10}{next}"
+textreturn
 sfx huh
 pause 120
 
@@ -76,18 +75,15 @@ char lilian hide
 set char_hellinger_name ???
 char hellinger e=point
 "Well,{p15} are you going to remove this unneeded interference already?"
-char hellinger e=closed
-"She's bound to contaminate the scene.{p30} Her presence is objectively bad."
+"{e point}She's bound to contaminate the scene.{p30} Her presence is objectively bad."
 
 char lilian hide
 "{sfx waaah}Objectively!?"
 
 char gardt e=think
 "Weeeell,{p15} what am I supposed to do?"
-char gardt e=crossed
-"{sfx idea}As I said,{p15} rule of two.{p30} There's always gotta be two people here."
-char gardt e=relief
-"Y'know,{p15} so nobody has a chance to tamper with things."
+"{e crossed}{sfx idea}As I said,{p15} rule of two.{p30} There's always gotta be two people here."
+"{e relief}Y'know,{p15} so nobody has a chance to tamper with things."
 
 char lilian hide
 "{c b}({sfx idea}Yay for lazy excuses!)"

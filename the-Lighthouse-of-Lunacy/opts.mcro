@@ -50,3 +50,15 @@ set char_than_defsound blips/than.ogg
 set char_victoria_defsound blips/victoria.ogg
 label end
 endmacro
+
+macro emptytext
+removeskip
+set _textbox_bg general/textboxnont
+set _cr_button false
+endmacro
+
+macro textreturn
+set _textbox_bg general/textbox2
+set _cr_button false
+textskipcheck
+macro

@@ -1,6 +1,4 @@
-music_fade_in
-mus 6. Slight Discomfort [Lost Judgement]
-set _music_loop 6. Slight Discomfort [Lost Judgement] - Loop
+set _music_fade 100
 
 label scene2menu
 set _textbox_bg general/textbox2
@@ -76,12 +74,9 @@ char aurelia hide
 
 char lilian e=normal
 "{sfx idea}Looks like it.{p30} Want to go?"
-char lilian e=wink
-"Might be great for inspiration."
-char lilian e=side
-"Let's see...{p50}{n}Someone gets into a Ferris wheel..."
-char lilian e=smile
-"{sfx dun}{f10}...but when the cabin comes back down,{p15} they're gone.{p30} What happened?"
+"{e wink}Might be great for inspiration."
+"{e side}Let's see...{p50}{n}Someone gets into a Ferris wheel..."
+"{sfx dun}{e smile}{f10}...but when the cabin comes back down,{p15} they're gone.{p30} What happened?"
 
 char aurelia hide
 "If that ever happened,{p15} you'd almost certainly have to blame the staff for it."
@@ -116,8 +111,7 @@ goto examine
 #TALK MENU
 label talk
 set script._override_bg bg/mainlol
-list talk bg=talk_bg fail=talk_fail
-delete name=wa
+list talk bg=talk_bg
 char cova e=normal 
 li You are?
 flag youaredone?
@@ -132,7 +126,6 @@ label You are?
 set script._override_bg bg/mainlol
 pause 10
 set _bigbutton_bg empty_buttonpress
-delete name=wa
 char cova e=normal
 "How careless of me to forget introductions.{p30} My name is Ander Cova."
 "I'm a local merchant here in Monica Town.{p30} Always have been."
@@ -150,8 +143,7 @@ char aurelia hide
 
 char lilian e=normal
 "{f10}He's straight up lying,{p15} no?{p30} You can tell,{p15} right?"
-char lilian e=peace
-"{sfx idea}I'm not your personal lie detector.{p30} You've got to stop relying on me for that."
+"{sfx idea}{e peace}I'm not your personal lie detector.{p30} You've got to stop relying on me for that."
 
 char aurelia hide
 "{sfx whoops}{c b}(Wait,{p15} but this is literally the first time I asked today.)"
@@ -162,8 +154,7 @@ char lilian e=nuhuh
 
 char cova e=normal
 "I assure you,{p15} there is no reason to be wary of me."
-char cova e=tray
-"{sfx idea}I am simply a local,{p15} trying to make a living with my sweets."
+"{sfx idea}{e tray}I am simply a local,{p15} trying to make a living with my sweets."
 "There is a lot of tourism around these parts.{p30} Ever since the amusement park opened."
 "We have some nice coasts,{p15} too."
 
@@ -188,18 +179,15 @@ char aurelia hide
 
 char lilian e=normal
 "A curse.{p30} Now things are getting interesting."
-char lilian e=nuhuh
-"Takes me back to the days we solved the seven school mysteries."
+"{e nuhuh}Takes me back to the days we solved the seven school mysteries."
 
 char aurelia hide
 "{sfx whoops}I don't remember that arc.{p30} That's not a real thing that happened."
 
 char lilian e=normal
 "...Eh,{p15} even detectives need to fudge their resumes a little."
-char lilian e=side
-"Anyway,{p15} seems like the locals aren't happy with this auction for some reason."
-char lilian e=wink
-"{sfx idea}We should ask a little more about that."
+"{e side}Anyway,{p15} seems like the locals aren't happy with this auction for some reason."
+"{sfx idea}{e wink}We should ask a little more about that."
 setflag youaredone
 
 addev cova$
@@ -317,6 +305,7 @@ char aurelia hide
 "But there are such contradictory situations where you just can't be the hero no matter your choice."
 
 music_fade_out
+mus
 char lilian e=pout
 "{spd 0.5}...{p10}{next}"
 
@@ -325,15 +314,14 @@ char cova e=tray
 
 char lilian e=pout
 pause 60
-char lilian e=nuhuh
-"{f10}{sfx ding}Nah, it's fine.{p30}{n}It's but a minor disagreement."
+"{f10}{sfx ding}{e nuhuh}Nah, it's fine.{p30}{n}It's but a minor disagreement."
 
 char aurelia hide
 "{c b}(...Maybe I said too much.{p30} She definitely isn't happy with my take.)"
 
-music_fade_in
 mus 6. Slight Discomfort [Lost Judgement]
 set _music_loop 6. Slight Discomfort [Lost Judgement] - Loop
+music_fade_in
 
 char lilian e=normal
 "I get the picture now.{p30} So the owner of this place died in that incident?"
@@ -350,8 +338,7 @@ char aurelia hide
 
 char cova e=normal
 "...Certainly.{p30} That's what I'm here to warn you about."
-char cova e=tray
-"Just let me know when you are prepared to hear the rest of the story."
+"{e tray}Just let me know when you are prepared to hear the rest of the story."
 
 setflag theauctiondone
 goto talk
@@ -361,7 +348,6 @@ label The Reaper's Curse
 set script._override_bg bg/mainlol
 pause 10
 set _bigbutton_bg empty_buttonpress
-delete name=wa
 
 char aurelia hide
 "I understand how that incident may have caused some rumors."
@@ -394,13 +380,10 @@ pause 30
 bg coast fade stack
 char lilian e=side fade nowait
 
-char lilian e=side
 "You'll have to do better to convince me."
-char lilian e=normal
-"The eyes on the tower are blinking at night?"
+"{e normal}The eyes on the tower are blinking at night?"
 "Maybe if it was witnessed in the day,{p15} there'd be something to it."
-char lilian e=peace
-"People's brains tend to play tricks on themselves in the dark."
+"{e peace}People's brains tend to play tricks on themselves in the dark."
 
 char aurelia hide
 "Yeah.{p30} And I doubt it'd cause that much concern."
@@ -470,8 +453,7 @@ showevr
 
 char lilian e=normal
 "I remember you said you visited the dentist."
-char lilian e=peace
-"{sfx idea}I'm starting to see why that was needed."
+"{e peace}{sfx idea}I'm starting to see why that was needed."
 
 char aurelia hide
 "*sigh*"
@@ -526,16 +508,11 @@ label gunA
 set _ev gunA
 showevl
 
-flag guncovafinal?
-goto guncovafinal
-flag guncovafour?
-goto guncovafour
-flag guncovathree?
-goto guncovathree
-flag guncovatwo?
-goto guncovatwo
-flag guncovaone?
-goto guncovaone
+flag guncovafinal guncovafinal
+flag guncovafour guncovafour
+flag guncovathree guncovathree
+flag guncovatwo guncovatwo
+flag guncovaone guncovaone
 sfx selectoption
 pause 50
 
@@ -754,14 +731,10 @@ goto present
 label lilian$
 set _ev lilian$
 showevl
-flag lilfriend?
-goto lilfrienddirect
-flag lilwife?
-goto lilwifedirect
-flag lilmother?
-goto lilmotherdirect
-flag lilstranger?
-goto lilstrangerdirect
+flag lilfriend lilfrienddirect
+flag lilwife lilwifedirect
+flag lilmother lilmotherdirect
+flag lilstranger lilstrangerdirect
 char cova e=normal
 "Well,{p15} this is the first time we meet.{p30} I'm afraid I'm in no position to tell you anything about your..."
 char cova e=tray
@@ -900,8 +873,7 @@ char aurelia hide
 
 char cova e=normal
 "{sfx waaah}{s10}A-Astounding.{p30} Pardon me,{p15} you acted so familiar with each other..."
-char cova e=tray
-"Don't hesitate to call the police if she troubles you."
+"{e tray}Don't hesitate to call the police if she troubles you."
 
 char aurelia hide
 "It's fine.{p30} I'll tolerate it for now."

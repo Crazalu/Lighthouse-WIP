@@ -1,6 +1,7 @@
 set _textbox_bg general/textbox2
 set _cr_button true
 bg crimescene2 fade
+emptytext
 "{f10}{next}"
 pause 120
 invert value=1 name=crimescene2
@@ -26,6 +27,7 @@ scroll name=aurelia x=210 z=3 speed=10 stack
 char lilian e=normal name=lilian x=256 z=3 stack
 scroll name=lilian x=-210 z=3 speed=10 stack
 pause 120
+textreturn
 "Did you calm down?"
 setvar _speaking aurelia
 emo smug
@@ -89,7 +91,7 @@ setvar _speaking lilian
 emo normal
 "{sfx key2}From what you have told me,{p15} she came at you first."
 emo wink
-"Sounds like {sfx key3}{c r}self-defense{c w} to me.
+"Sounds like {sfx key3}{c r}self-defense{c w} to me."
 emo peace
 "You can certainly be blamed for things here.{p30} But murder?{p30} No way!"
 

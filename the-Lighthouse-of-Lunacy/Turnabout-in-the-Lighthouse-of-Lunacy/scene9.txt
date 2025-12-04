@@ -9,8 +9,7 @@ textskipcheck
 bg crimescene2 stack
 char hellinger e=normal
 "Dear genius,{p15} are you just going to keep making noise?"
-char hellinger e=point
-"{sfx anger}What kind of person comments loudly on everything?"
+"{e point}{sfx anger}What kind of person comments loudly on everything?"
 
 char lilian hide
 "{sfx huh}Oh,{p15} could it be I'm disrupting your focus?"
@@ -25,26 +24,22 @@ char lilian hide
 
 char hellinger e=serious
 "{sfx anger}I can't have you do that."
-char hellinger e=closed
-"How about this?{p30} I'll give you a piece of evidence."
+"{e closed}How about this?{p30} I'll give you a piece of evidence."
 
 char lilian hide
 "Just one?{p30} That'd barely tell me anything!"
 
 char hellinger e=normal
 "{sfx anger}Here comes the greed.{p30} Fine."
-char hellinger e=point
-"{sfx idea}One piece of evidence,{p15} and the current autopsy report."
-char hellinger e=closed
-"That should provide you with acceptable data about the body."
+"{e point}{sfx idea}One piece of evidence,{p15} and the current autopsy report."
+"{e closed}That should provide you with acceptable data about the body."
 
 char lilian hide
 "{sfx huh}There's an autopsy report?{p30} How?"
 
 char hellinger e=normal
 "...Naturally,{p15} no proper autopsy took place yet.{p30} There wasn't enough time for that."
-char hellinger e=shrug
-"Still,{p15} I am a doctor with state of the art technology."
+"{e shrug}Still,{p15} I am a doctor with state of the art technology."
 "I can handle doing a bit of a preliminary analysis."
 
 char lilian hide
@@ -53,8 +48,7 @@ char lilian hide
 
 char hellinger e=shrug
 "Don't think your haphazard methods put you on the same level as mine."
-char hellinger e=serious
-"I simply do what's necessary to ensure an optimal investigation."
+"{e serious}I simply do what's necessary to ensure an optimal investigation."
 
 char lilian hide
 "{sfx idea}As do I."
@@ -73,8 +67,7 @@ char lilian hide
 
 char hellinger e=normal
 "It was lying near the victim.{p30} As was its sheath."
-char hellinger e=shrug
-"It's a visual match with the knife that was about to be auctioned off."
+"{e shrug}It's a visual match with the knife that was about to be auctioned off."
 "The likely hypothesis is that the auctioneer still carried it."
 
 char lilian hide
@@ -127,12 +120,9 @@ char lilian hide
 
 char hellinger e=normal
 "Anything else would be inaccurate with my current observations."
-char hellinger e=shrug
-"We humans are easily swayed to accept things as fact that we simply don't actually know."
-char hellinger e=normal
-"Coroners these days think they can just rely on witness testimony to narrow the time of death."
-char hellinger e=closed
-"Subjective assumptions are worthless.{p30} We should only make direct observations on the body."
+"{e shrug}We humans are easily swayed to accept things as fact that we simply don't actually know."
+"{e normal}Coroners these days think they can just rely on witness testimony to narrow the time of death."
+"{e closed}Subjective assumptions are worthless.{p30} We should only make direct observations on the body."
 
 char lilian hide
 "{c b}({sfx huh}Heh...{p50} I think I closed in on her pet peeve.{p30} Good to know.)"
@@ -140,22 +130,17 @@ char lilian hide
 
 char hellinger e=normal
 "That's correct.{p30} In its current state,{p15} this report would not hold in a murder trial."
-char hellinger e=shrug
-"Well,{p15} there would be room to cast reasonable doubt,{p15} at least.{p30} And it would be objectively true."
+"{e shrug}Well,{p15} there would be room to cast reasonable doubt,{p15} at least.{p30} And it would be objectively true."
 
 set _ev susan$
 showevr
 char hellinger e=normal
 "{sfx idea}You can blame Ms. Holden for the rushed job.{p30} She forced the schedule."
 hideevr
-char hellinger e=normal
 "That said,{p15} it's plenty for a civil trial."
-char hellinger e=closed
-"A simple preponderance of evidence is perfectly sufficient for that."
-char hellinger e=shrug
-"Not sure how to feel about it,{p15} but the law is the law."
-char hellinger e=normal
-"{sfx huh}Speaking of,{p15} shouldn't you hurry back?"
+"{e closed}A simple preponderance of evidence is perfectly sufficient for that."
+"{e shrug}Not sure how to feel about it,{p15} but the law is the law."
+"{e normal}{sfx huh}Speaking of,{p15} shouldn't you hurry back?"
 
 char lilian hide
 "Eh?"

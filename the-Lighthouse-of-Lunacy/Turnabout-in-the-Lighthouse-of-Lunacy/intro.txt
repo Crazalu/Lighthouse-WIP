@@ -2,10 +2,9 @@ set_textbox_wrap false
 set_textbox_lines 3
 set _textbox_bg general/textboxnont
 
-set color_b AADEF6 # Thoughts and court record text
+set color_b 00f6ff # Thoughts and court record text
 set color_g 00F61C # Typewriter text, for stuff like date and time and also asking questions of the player
-set color_r E57335 # important details text
-set color_y FFFB2E # widget (and other machine) text
+set color_r ff5a00 # important details text
 set color_w FFFFFF # normal speaking text
 set color_p 4040b4 # cards of fate text
 
@@ -35,4 +34,5 @@ set char_than_name ???
 
 include evidence
 
+script scene1
 script playtest

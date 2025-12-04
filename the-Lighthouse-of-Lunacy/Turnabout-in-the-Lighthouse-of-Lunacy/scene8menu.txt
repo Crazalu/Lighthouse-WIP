@@ -62,7 +62,9 @@ char lilian hide
 "{sfx huh}Curtains cover all of the windows.{p30} Who knows what they might hide?"
 "Alright,{p15} time to undo them!"
 nt
+emptytext
 "{f10}{p60}{next}"
+textreturn
 
 char lilian hide
 "...Nothing behind them.{p30} Just huge glass panes."
@@ -186,8 +188,7 @@ hideevr
 
 char hellinger e=shrug
 "You don't have to be with the police to be a detective nowadays."
-char hellinger e=serious
-"Given how you introduced yourself,{p15} you could have figured that."
+"{e serious}Given how you introduced yourself,{p15} you could have figured that."
 
 char lilian hide
 "{sfx anger}Well,{p15} if I don't have authority to be here,{p15} then neither do you!"
@@ -202,8 +203,7 @@ char lilian hide
 
 char hellinger e=normal
 "...Adequate attempt.{p30} You act shocked,{p15} trying to get me to elaborate."
-char hellinger e=shrug
-"I have no reason to spell it out for you."
+"{e shrug}I have no reason to spell it out for you."
 
 char lilian hide
 "{sfx anger}Give me something!{p30} My friend got arrested."
@@ -234,8 +234,7 @@ char lilian hide
 
 char hellinger e=normal
 "No."
-char hellinger e=serious
-"...And continual pestering won't sway me either."
+"{e serious}...And continual pestering won't sway me either."
 
 char lilian hide
 "{c b}({sfx whoops}She might be trouble.{p30} I can't get a good read on her.)"
@@ -264,8 +263,7 @@ char lilian hide
 
 char hellinger e=closed
 "It concededly looks like it would provide a suitable mugshot for my files."
-char hellinger e=smile
-"{sfx idea}However,{p15} I already took a sufficient amount of photos myself."
+"{e smile}{sfx idea}However,{p15} I already took a sufficient amount of photos myself."
 
 char lilian hide
 "{sfx waaah}{s10}Wh-{p30} That's illegal!"
@@ -341,11 +339,9 @@ char lilian hide
 
 char hellinger e=closed
 "Your only evidence for this hypothesis is that his prediction happened to be right."
-char hellinger e=normal
-"Statistically,{p15} many random predictions come true."
+"{e normal}Statistically,{p15} many random predictions come true."
 "You could predict your death each day and would be correct eventually."
-char hellinger e=serious
-"Unless you have more context to prove a correlation here?"
+"{e serious}Unless you have more context to prove a correlation here?"
 
 char lilian hide
 "{s10}I got a hunch.{p30} He's definitely up to something."
@@ -388,8 +384,7 @@ char lilian hide
 
 char hellinger e=serious
 "It's certainly more than I can say about some of the other guests."
-char hellinger e=shrug
-"It really shouldn't be that difficult not to step all over this room."
+"{e shrug}It really shouldn't be that difficult not to step all over this room."
 
 char lilian hide
 "{c b}{s10}(Should I feel called out?)"
@@ -402,10 +397,8 @@ char lilian hide
 
 char hellinger e=shrug
 "Not now.{p30} I'm busy."
-char hellinger e=serious
-"If this is relevant to the trial,{p15} the data will be presented there."
-char hellinger e=smile
-"{sfx huh}Look forward to it."
+"{e serious}If this is relevant to the trial,{p15} the data will be presented there."
+"{e smile}{sfx huh}Look forward to it."
 
 char lilian hide
 "{c b}(I so am.)"
