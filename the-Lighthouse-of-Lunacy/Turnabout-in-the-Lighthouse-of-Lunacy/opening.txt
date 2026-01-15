@@ -442,7 +442,7 @@ setvar _speaking aurelia
 emo stern
 "{c b}(I should take a moment to go over everything that led up to this incident.)"
 
-fg black stack
+fg black stack z=5
 fade in name=black
 delete name=chaintop nowait
 delete name=chainbottom nowait
@@ -451,9 +451,11 @@ delete name=gimmickbottom nowait
 delete name=gearfg nowait
 delete name=aurelia nowait
 delete name=lilian nowait
-pause 180
+pause 50
+delete name=timestop40
 delete name=black
-bg black stack
+fg black stack fade
+pause 30
 bg earlier stack
 fade in name=earlier
 pause 250

@@ -34,5 +34,4 @@ set char_than_name ???
 
 include evidence
 
-script scene1
 script playtest

@@ -197,7 +197,7 @@ emo peace
 "It's everything.{p30} You'll see."
 
 music_fade_out
-fg black stack
+fg black stack z=5
 fade in name=black
 delete name=chaintop nowait
 delete name=chainbottom nowait
@@ -206,7 +206,9 @@ delete name=gimmickbottom nowait
 delete name=gearfg nowait
 delete name=aurelia nowait
 delete name=lilian nowait
-pause 180
+pause 50
+delete name=timestop38
 delete name=black
-bg black stack
+fg black stack fade
+pause 30
 script scene13victest
